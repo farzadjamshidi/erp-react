@@ -1,11 +1,13 @@
 import React from 'react';
-import { IProvider } from '../Helpers/providers';
 import { useInjection } from '../Hooks/ioc.react';
+import { IGreetingRepo } from '../Repository/contracts/IGreeting.repo';
 
 export const Hello: React.FC = () => {
-    const provider = useInjection<IProvider<string>>('nameProvider');
+    const greetingRepo = useInjection<IGreetingRepo<any>>('greeting_v1');
 
     return (
-        <h1>Hello {provider.provide()}!</h1>
+        <>
+            <h1 className='text-3xl font-bold underline text-center'>{greetingRepo.sayHello()}</h1>
+        </>
     );
 };
