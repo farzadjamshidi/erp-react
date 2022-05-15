@@ -4,23 +4,24 @@ import { IGreetingRepo } from "../contracts/IGreeting.repo";
 
 @injectable()
 export class GreetingService_v1 implements IGreetingRepo<any>{
-    public sayHello(): string {
-        return "Hello from greeting service!";
+    sayHello(): string {
+        return "Hello from Greeting Service";
     }
-    public getAll(): Promise<BaseResponse<any[]>> {
+    getAll(): Promise<BaseResponse<any[]>> {
         throw new Error("Method not implemented.");
     }
-    public getById(id: number): Promise<BaseResponse<any>> {
+    getById(id: number): Promise<BaseResponse<any>> {
         throw new Error("Method not implemented.");
     }
-    public create(item: any): Promise<BaseResponse<any>> {
+    create(item: any): Promise<BaseResponse<any>> {
         throw new Error("Method not implemented.");
     }
-    public update(id: number, item: any): Promise<BaseResponse<any>> {
+    update(id: number, item: any): Promise<BaseResponse<any>> {
         throw new Error("Method not implemented.");
     }
-    public delete(id: number): Promise<BaseResponse<any>> {
+    delete(id: number): Promise<BaseResponse<any>> {
         throw new Error("Method not implemented.");
     }
+  
 
 }
